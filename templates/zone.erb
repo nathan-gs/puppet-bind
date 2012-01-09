@@ -1,0 +1,6 @@
+
+zone "<%= name %>" {
+	type master;
+	file "/etc/bind/zones/<%= name %>";
+	allow-transfer { <%= slave_acl_name %>; };
+};
