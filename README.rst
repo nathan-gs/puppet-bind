@@ -3,15 +3,11 @@ Puppet module to manage BIND
 
 Copy the module to your modules dir. Add a site-bind module. Add the bind dns zone files to the site-bind files directory.
 
-Add to your node definition:
+Add to your node definition::
 
-.. code-block:: ruby
+    include bind
 
-	include bind
-
-Define some ACL.
-
-.. code-block:: ruby
+Define some ACL::
 
 	bind::acl { "slaves" : 
 		nodes => [
@@ -20,11 +16,9 @@ Define some ACL.
 		]
 	}
 
-Define your zones.
+Define your zones.::
 
-.. code-block:: ruby
-
-	bind::zone { "example.org" :	}
+	bind::zone { "example.org" : }
 	bind::zone { "example.com" : }
 
 
