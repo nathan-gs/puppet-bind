@@ -22,6 +22,7 @@ class bind {
 			"puppet:///modules/bind/zones"
 			],
 		recurse => true,
+		notify	=> Service['bind9']
 	}
 
 	include concat::setup
